@@ -12,22 +12,22 @@
 	</header>
 
 	<main>
-		<section class="flex">
+		<section class="flex flex-col md:flex-row">
             <!-- Card Design -->
-            <div class="flex flex-col md:flex-col-2">
+            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                <!-- Triangle Card Design -->
 			   <div class="card w-96 bg-base-100 shadow-xl">
 				<figure><img src="images/triangle.png" alt="Triangle" /></figure>
 				<div class="card-body">
 				  <h2 class="card-title">Triangle</h2>
-				  <p>Area (A): 0.5*A*H</p>
+				  <p>Area (A): 0.5*B*H</p>
 				  <div>
-					<input class="triangle-input" type="text" placeholder="A"><p>cm</p><br>
-					<input class="triangle-input" type="text" placeholder="H"><p>cm</p><br>
+					<input class="w-24 text-2xl p-2 rounded-sm" type="text" placeholder="B"><span class="mr-4 ml-2">cm</span>
+					<input class="w-24 text-2xl p-2 rounded-sm" type="text" placeholder="H"><span>cm</span>
 					<p>Area is: <span id="triangle-area"></span></p>
 				  </div>
 				  <div class="card-actions justify-end">
-					<button onclick="TriangleArea()" class="btn btn-primary">Calculate</button>
+					<button onclick="CalculateTriangleArea()" class="btn btn-primary">Calculate</button>
 				  </div>
 				</div>
 			  </div>
@@ -92,5 +92,7 @@
 			</div>
 		</section>
 	</main>
+
+	<script src="scripts/triangle-area.js"></script>
 </body>
 </html>
